@@ -2,7 +2,4 @@
 .polygon_api_key
 .ipynb_checkpoints
 *.h5
-Pandas.ipynb
-Numba.ipynb
-NumPy.ipynb
-.Trash*
+*.html
