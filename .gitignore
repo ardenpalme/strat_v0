@@ -1,5 +1,4 @@
 .github_token
 .polygon_api_key
-.ipynb_checkpoints
 *.h5
 *.html
