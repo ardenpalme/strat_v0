@@ -217,7 +217,7 @@ def generate_signals(kama_fast, kama_slow, adx, adx_thrsh):
 
     adx_filter = np.where(adx > adx_thrsh, 1.0, 0.0)
     entries = entries * adx_filter
-    exits = exits * adx_filter
+    # exits = exits * adx_filter # Do not supress exits on weak trends
 
     started = False  
     long = False     
@@ -324,7 +324,7 @@ def plot_strategy(market_data, symbol, ind_params=dfl_params):
 
     fig.update(layout_xaxis_rangeslider_visible=False)
 
-    return fig
+    return entries, exits, fig
 
 
 @njit(nogil=True)
